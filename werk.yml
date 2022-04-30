@@ -1,0 +1,67 @@
+version: "1"
+
+max_jobs: 1
+
+jobs:
+  main:
+    executor: local
+    needs:
+      - macos:clock
+      - macos:dock
+      - macos:finder
+      - dev:vscode:extensions
+
+  macos:clock:
+    executor: local
+    commands:
+      - echo "[*] Configuring clock"
+      - defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
+
+  macos:dock:
+    executor: local
+    commands:
+      - echo "[*] Configuring Dock"
+      - defaults write com.apple.dock autohide -bool "true"
+      - defaults write com.apple.dock orientation -string "left"
+      - defaults write com.apple.dock magnification -bool "true"
+      - defaults write com.apple.dock show-recents -bool "false"
+      - defaults write com.apple.dock tilesize -int 45
+      - defaults write com.apple.dock largesize -int 85
+      - killall Dock
+
+  macos:finder:
+    executor: local
+    commands:
+      - echo "[*] Configuring Finder"
+
+  dev:vscode:extensions:
+    executor: local
+    commands:
+      - echo "[*] Installing vscode extensions"
+      - code --install-extension adamhartford.vscode-base64
+      - code --install-extension bierner.markdown-mermaid
+      - code --install-extension crystal-lang-tools.crystal-lang
+      - code --install-extension dbaeumer.vscode-eslint
+      - code --install-extension esbenp.prettier-vscode
+      - code --install-extension espresso3389.vscode-hasher-extended
+      - code --install-extension foxundermoon.shell-format
+      - code --install-extension GitHub.copilot
+      - code --install-extension golang.go
+      - code --install-extension Gruntfuggly.todo-tree
+      - code --install-extension hashicorp.terraform
+      - code --install-extension ipedrazas.kubernetes-snippets
+      - code --install-extension jetmartin.bats
+      - code --install-extension mike-co.import-sorter
+      - code --install-extension milovidov.escape-quotes
+      - code --install-extension ms-python.python
+      - code --install-extension ms-python.vscode-pylance
+      - code --install-extension ms-vscode-remote.remote-containers
+      - code --install-extension rebornix.ruby
+      - code --install-extension redhat.vscode-commons
+      - code --install-extension redhat.vscode-yaml
+      - code --install-extension RickyWhite.python-template-snippets
+      - code --install-extension timonwong.shellcheck
+      - code --install-extension veelenga.crystal-ameba
+      - code --install-extension wingrunr21.vscode-ruby
+      - code --install-extension wmaurer.change-case
+      - code --install-extension yzhang.markdown-all-in-one
