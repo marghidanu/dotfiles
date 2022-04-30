@@ -22,6 +22,6 @@ werk run
 
 ## References
 
-* [Homebrew](https://](https://brew.sh)
+* [Homebrew](https://brew.sh)
 * [Homebrew bundles](https://github.com/Homebrew/homebrew-bundle)
 * [Werk](https://github.com/marghidanu/werk)
