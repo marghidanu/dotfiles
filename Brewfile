@@ -32,7 +32,3 @@ cask "tunnelblick"
 cask "visual-studio-code"
 cask "yed"
 cask "zoom"
-
-# --- App Store
-
-mas "Dashlane – Password Manager", id: 517914548
