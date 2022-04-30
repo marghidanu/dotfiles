@@ -15,7 +15,7 @@ jobs:
     executor: local
     commands:
       - echo "[*] Configuring clock"
-      - defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
+      - defaults write com.apple.menuextra.clock DateFormat -string "\"EEE d MMM HH:mm:ss\""
 
   macos:dock:
     executor: local
@@ -43,6 +43,8 @@ jobs:
     executor: local
     commands:
       - echo "[*] Configuring Finder"
+      - defaults write com.apple.finder _FXShowPosixPathInTitle -bool "true"
+      - defaults write com.apple.finder ShowStatusBar -bool "true"
 
   dev:vscode:extensions:
     executor: local
