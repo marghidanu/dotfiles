@@ -10,6 +10,7 @@ jobs:
       - macos:dock
       - macos:finder
       - dev:vscode:extensions
+      - dev:docker:images
 
   macos:clock:
     executor: local
@@ -45,6 +46,8 @@ jobs:
       - echo "[*] Configuring Finder"
       - defaults write com.apple.finder _FXShowPosixPathInTitle -bool "true"
       - defaults write com.apple.finder ShowStatusBar -bool "true"
+      - defaults write com.apple.finder ShowPathbar -bool "true"
+      - killall Finder
 
   dev:vscode:extensions:
     executor: local
@@ -77,3 +80,8 @@ jobs:
       - code --install-extension wingrunr21.vscode-ruby
       - code --install-extension wmaurer.change-case
       - code --install-extension yzhang.markdown-all-in-one
+  
+  dev:docker:images:
+    executor: local
+    commands:
+      - docker pull alpine:3.15
