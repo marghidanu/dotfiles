@@ -1,5 +1,7 @@
 tap "marghidanu/werk" || true
 
+# --- Taps
+
 brew "awscli"
 brew "crystal"
 brew "go"
