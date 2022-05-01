@@ -88,3 +88,8 @@ jobs:
       - docker pull alpine:3.15
       - docker pull node:18-alpine
       - docker pull python:3.10-alpine
+
+  dev:ohmyzsh:
+    executor: local
+    commands:
+      - echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc

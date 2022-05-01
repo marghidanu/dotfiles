@@ -1,4 +1,5 @@
 tap "marghidanu/werk" || true
+tap "romkatv/powerlevel10k" || true
 
 # --- Taps
 
@@ -14,7 +15,7 @@ brew "kubectx"
 brew "mas"
 brew "midnight-commander"
 brew "node"
-brew "romkatv/powerlevel10k/powerlevel10k"
+brew "powerlevel10k"
 brew "shellcheck"
 brew "terraform"
 brew "watchexec"
