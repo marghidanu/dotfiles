@@ -6,11 +6,12 @@ jobs:
   main:
     executor: local
     needs:
+      - dev:docker:images
+      - dev:ohmyzsh
+      - dev:vscode:extensions
       - macos:clock
       - macos:dock
       - macos:finder
-      - dev:vscode:extensions
-      - dev:docker:images
 
   macos:clock:
     executor: local
