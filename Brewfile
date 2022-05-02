@@ -1,10 +1,10 @@
 tap "marghidanu/werk" || true
+tap "romkatv/powerlevel10k" || true
 
 # --- Taps
 
 brew "awscli"
 brew "crystal"
-brew "gnu-sed"
 brew "go"
 brew "hadolint"
 brew "helm"
@@ -15,6 +15,7 @@ brew "kubectx"
 brew "mas"
 brew "midnight-commander"
 brew "node"
+brew "powerlevel10k"
 brew "shellcheck"
 brew "terraform"
 brew "watchexec"
