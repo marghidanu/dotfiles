@@ -7,11 +7,11 @@ jobs:
     executor: local
     needs:
       - dev:docker:images
-      - dev:ohmyzsh
       - dev:vscode:extensions
       - macos:clock
       - macos:dock
       - macos:finder
+      - ohmyzsh
 
   macos:clock:
     executor: local
@@ -90,7 +90,12 @@ jobs:
       - docker pull node:18-alpine
       - docker pull python:3.10-alpine
 
-  dev:ohmyzsh:
+  ohmyzsh:
     executor: local
     commands:
+      - echo "[*] Installing Oh My Zsh"
+      - /bin/bash -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      - brew install romkatv/powerlevel10k/powerlevel10k
       - echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+      - gsed -i 's/ZSH_THEME=.*/ZSH_THEME="powerlevel10k/powerlevel10k"/' ~/.zshrc
+      - cp .p10k.zsh $HOME/.p10k.zsh
