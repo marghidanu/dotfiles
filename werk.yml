@@ -98,4 +98,5 @@ jobs:
       - brew install romkatv/powerlevel10k/powerlevel10k
       - echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
       - gsed -i 's/ZSH_THEME=.*/ZSH_THEME="powerlevel10k/powerlevel10k"/' ~/.zshrc
+      - echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >>~/.zshrc
       - cp .p10k.zsh $HOME/.p10k.zsh
