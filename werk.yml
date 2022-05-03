@@ -62,6 +62,7 @@ jobs:
       - code --install-extension espresso3389.vscode-hasher-extended
       - code --install-extension foxundermoon.shell-format
       - code --install-extension GitHub.copilot
+      - code --install-extension gitlab.gitlab-workflow
       - code --install-extension golang.go
       - code --install-extension Gruntfuggly.todo-tree
       - code --install-extension hashicorp.terraform
