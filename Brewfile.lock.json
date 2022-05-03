@@ -729,7 +729,7 @@
         }
       },
       "google-chrome": {
-        "version": "101.0.4951.41",
+        "version": "101.0.4951.54",
         "options": {
           "full_name": "google-chrome"
         }
@@ -799,6 +799,12 @@
         "options": {
           "full_name": "spotify"
         }
+      },
+      "1password": {
+        "version": "8.7.0",
+        "options": {
+          "full_name": "1password"
+        }
       }
     },
     "mas": {
@@ -810,7 +816,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.4.10",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "902541a68ff0b2c133b219d3a5e7897625524726",
+        "Homebrew/homebrew-core": "6798763743df1ad3fe256aa27b39807ab690437a",
         "CLT": "13.3.1.0.1.1648687083",
         "Xcode": "13.3",
         "macOS": "12.3.1"

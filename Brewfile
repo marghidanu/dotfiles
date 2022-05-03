@@ -24,6 +24,7 @@ brew "yq"
 
 # --- Casks 
 
+cask "1password"
 cask "appcleaner"
 cask "docker"
 cask "google-chrome"
