@@ -5,6 +5,7 @@ tap "romkatv/powerlevel10k" || true
 
 brew "awscli"
 brew "crystal"
+brew "defaultbrowser"
 brew "go"
 brew "hadolint"
 brew "helm"

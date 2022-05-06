@@ -8,6 +8,7 @@ jobs:
     needs:
       - dev:docker:images
       - dev:vscode:extensions
+      - macos:browser
       - macos:clock
       - macos:dock
       - macos:finder
@@ -49,6 +50,11 @@ jobs:
       - defaults write com.apple.finder ShowStatusBar -bool "true"
       - defaults write com.apple.finder ShowPathbar -bool "true"
       - killall Finder
+
+  macos:browser:
+    executor: local
+    commands:
+      - defaultbrowser chrome
 
   dev:vscode:extensions:
     executor: local
