@@ -13,6 +13,12 @@ jobs:
       - macos:dock
       - macos:finder
       - ohmyzsh
+  
+  macos:browser:
+    executor: local
+    commands:
+      - echo "[*] Setting the default browser"
+      - defaultbrowser chrome
 
   macos:clock:
     executor: local
@@ -50,11 +56,6 @@ jobs:
       - defaults write com.apple.finder ShowStatusBar -bool "true"
       - defaults write com.apple.finder ShowPathbar -bool "true"
       - killall Finder
-
-  macos:browser:
-    executor: local
-    commands:
-      - defaultbrowser chrome
 
   dev:vscode:extensions:
     executor: local
