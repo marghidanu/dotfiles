@@ -68,13 +68,13 @@ jobs:
       - code --install-extension esbenp.prettier-vscode
       - code --install-extension espresso3389.vscode-hasher-extended
       - code --install-extension foxundermoon.shell-format
-      - code --install-extension GitHub.copilot
       - code --install-extension gitlab.gitlab-workflow
       - code --install-extension golang.go
       - code --install-extension Gruntfuggly.todo-tree
       - code --install-extension hashicorp.terraform
       - code --install-extension ipedrazas.kubernetes-snippets
       - code --install-extension jetmartin.bats
+      - code --install-extension kraih.mojolicious
       - code --install-extension mike-co.import-sorter
       - code --install-extension milovidov.escape-quotes
       - code --install-extension ms-python.python
@@ -84,6 +84,8 @@ jobs:
       - code --install-extension redhat.vscode-commons
       - code --install-extension redhat.vscode-yaml
       - code --install-extension RickyWhite.python-template-snippets
+      - code --install-extension svelte.svelte-vscode
+      - code --install-extension tiehuis.zig
       - code --install-extension timonwong.shellcheck
       - code --install-extension veelenga.crystal-ameba
       - code --install-extension wingrunr21.vscode-ruby
